@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.container {
+  width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.add-task input {
+  flex: 1;
+  padding: 10px;
+}
+.add-task button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tasks ul {
+  list-style: none;
+}
+.tasks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+.tasks li span {
+  flex: 1;
+}
+.tasks li button {
+  padding: 5px 10px;
+  cursor: pointer;
+}

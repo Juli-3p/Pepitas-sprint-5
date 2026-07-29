@@ -1,0 +1,25 @@
+.TaskItem{
+    width: 100%;
+    max-width: 512px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+.checkbox{
+    width: 24px;
+    height: 24px;
+}
+span{
+    flex: 1;
+    font-size: 24px;
+}
+button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+.completed{
+    text-decoration: line-through;
+}
