@@ -1,0 +1,108 @@
+/* Menú lateral izquierdo (100% altura, fijo) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; 
+  width: 260px;
+  background-color: #222222; 
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out; /* Animación para deslizar */
+  z-index: 1000;
+}
+
+/* Distribución interna: empuja el footer (perfil) hacia abajo */
+.sidebar-header {
+  padding: 20px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Esto hace que ocupe todo el espacio sobrante */
+}
+
+.sidebar-links li a {
+  display: block;
+  padding: 15px 20px;
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+/* El estado ACTIVO de la ruta actual */
+.sidebar-links li a.active {
+  background-color: #444444; 
+  color: #ffffff;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+
+
+.sidebar-footer {
+  padding: 20px;
+}
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* Ocultamos el botón y el overlay en pantallas grandes */
+.menu-btn-mobile {
+  display: none; 
+}
+.overlay {
+  display: none;
+}
+
+/*ESTILOS RESPONSIVE (1024px o menos)*/
+
+@media (max-width: 1024px) {
+  /* Ocultamos el menú desplazándolo hacia la izquierda fuera de la pantalla */
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  /* Cuando tiene la clase .open, lo regresamos a su posición original */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Mostramos el botón */
+  .menu-btn-mobile {
+    display: flex;
+    align-items: center;
+    background: #222222;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900; /* Por debajo del menú pero por encima del contenido */
+  }
+
+  /* Fondo oscuro transparente para hacer click afuera y cerrar el menú */
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 950; /* Justo debajo del menú */
+  }
+}

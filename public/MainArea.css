@@ -1,0 +1,32 @@
+/* MainArea.css */
+
+/* Contenedor principal */
+.main-area {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Altura total de la pantalla */
+  width: 100%;
+}
+
+
+.header {
+  position: sticky; 
+  top: 0;
+  height: 72px; 
+  width: 100%; /* Ocupa el ancho total de Main Area */
+  background-color: #e9ecef; 
+  border-bottom: 2px solid #dee2e6;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+
+.content {
+  /* Tiene una altura igual al total de la altura de Main Area menos la altura del Encabezado (72px) */
+  height: calc(100vh - 72px); 
+  width: 100%;
+  /* Su contenido puede desplazarse verticalmente si excede el alto del viewport */
+  overflow-y: auto; 
+  padding: 20px;
+  background-color: #ffffff;
+}
