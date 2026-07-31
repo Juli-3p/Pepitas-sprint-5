@@ -1,0 +1,51 @@
+.summary-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-card h2 {
+    margin: 0;
+    color: #235347;
+}
+
+.summary-card p {
+    margin: 0;
+    font-size: 18px;
+    color: #444;
+}
+
+.summary-card strong {
+    color: #163832;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.buttons a {
+    flex: 1;
+    text-align: center;
+
+    text-decoration: none;
+
+    background-color: #235347;
+    color: white;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #163832;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainArea.css';
+import SummaryCard from '../SummaryCard/SummaryCard.jsx';
 
 // Componente Header
 const Header = () => {
@@ -11,25 +12,45 @@ const Header = () => {
 };
 
 // Componente Content
-const Content = ({ children }) => {
+const Content = ({ username, productsCount, categoriesCount, children }) => {
   return (
     <main className="content">
-      {/* Aquí se renderizarán los módulos de productos, categorías y ventas */
-      <h3>Bienvenido al Panel de Administración</h3>}
-      <h4>Ejemplo de Contenido</h4>
-      
-      
+      <div className="home"> 
+        <h1>Hola {username}</h1>
+
+        <div className="summary-conteiner">
+          <SummaryCard
+            title="Productos"
+            count={productsCount}
+            listRoute="/products"
+            newRoute="/products/new"
+            type="product"
+          />
+          <SummaryCard
+            title="Categorías"
+            count={categoriesCount}
+            listRoute="/categories"
+            newRoute="/categories/new"
+            type="category"
+          />
+        </div>
+      </div>
+
       {children}
     </main>
   );
 };
 
 // Componente MainArea (Contenedor Principal)
-const MainArea = ({ children }) => {
+const MainArea = ({ username, productsCount, categoriesCount, children }) => {
   return (
     <div className="main-area">
       <Header />
-      <Content>
+      <Content 
+        username={username} 
+        productsCount={productsCount} 
+        categoriesCount={categoriesCount}
+      >
         {children}
       </Content>
     </div>

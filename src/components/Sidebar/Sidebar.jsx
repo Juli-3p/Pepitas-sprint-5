@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
+import Logo from '../../../public/logo.png';
 
 const Sidebar = () => {
   // Estado para controlar si el menú está abierto en pantallas chicas (<= 1024px)
@@ -28,7 +29,7 @@ const Sidebar = () => {
         
         {/* Zona superior: Logo o Título */}
         <div className="sidebar-header">
-          <h2>PepitasCorporation</h2>
+          <img src={Logo} alt="Logo" className="sidebar-logo" />
         </div>
 
         {/* Zona central: Enlaces de navegación */}

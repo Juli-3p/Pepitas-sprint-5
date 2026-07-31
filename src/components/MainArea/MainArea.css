@@ -40,3 +40,9 @@
   padding: 20px;
   background-color: #60756C;
 }
+
+.summary-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
