@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease-in-out; /* Animación para deslizar */
-  z-index: 1000;
+  z-index: 100;
 }
 
 /* Distribución interna: empuja el footer (perfil) hacia abajo */

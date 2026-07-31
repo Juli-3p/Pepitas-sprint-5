@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -29,35 +28,46 @@ const Sidebar = () => {
         
         {/* Zona superior: Logo o Título */}
         <div className="sidebar-header">
-          <h2>Santander</h2>
+          <h2>PepitasCorporation</h2>
         </div>
 
         {/* Zona central: Enlaces de navegación */}
         <ul className="sidebar-links">
           <li>
-            {/* NavLink añade automáticamente la clase 'active' si la ruta coincide */}
-            <NavLink to="/home" onClick={closeMenu}>
+            <a href="#" onClick={(event) => {
+              event.preventDefault();
+              closeMenu();
+            }}>
               🏠 Inicio
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink to="/products" onClick={closeMenu}>
+            <a href="products" onClick={(event) => {
+              event.preventDefault();
+              closeMenu();
+            }}>
               📦 Productos
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink to="/categories" onClick={closeMenu}>
+            <a href="categories" onClick={(event) => {
+              event.preventDefault();
+              closeMenu();
+            }}>
               🏪 Categorías
-            </NavLink>
+            </a>
           </li>
         </ul>
 
         {/* Zona inferior: Perfil de Usuario */}
         <div className="sidebar-footer">
-          <NavLink to="/profile" className="profile-btn" onClick={closeMenu}>
+          <a href="#" className="profile-btn" onClick={(event) => {
+            event.preventDefault();
+            closeMenu();
+          }}>
             <span className="profile-icon">👤</span>
-            Olivia
-          </NavLink>
+            NPC
+          </a>
         </div>
       </nav>
     </>
