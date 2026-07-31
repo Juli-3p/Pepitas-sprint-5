@@ -1,0 +1,33 @@
+.home-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background:  #222222;
+}
+
+.sidebar-container {
+  flex-shrink: 0;
+  width: 260px;
+  height: 100vh;
+  position: relative;
+}
+
+.mainarea-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: calc(100% - 260px);
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-container {
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .mainarea-container {
+    width: 100%;
+  }
+}

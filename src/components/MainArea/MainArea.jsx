@@ -14,7 +14,11 @@ const Header = () => {
 const Content = ({ children }) => {
   return (
     <main className="content">
-      {/* Aquí se renderizarán los módulos de productos, categorías y ventas */}
+      {/* Aquí se renderizarán los módulos de productos, categorías y ventas */
+      <h3>Bienvenido al Panel de Administración</h3>}
+      <h4>Ejemplo de Contenido</h4>
+      
+      
       {children}
     </main>
   );
