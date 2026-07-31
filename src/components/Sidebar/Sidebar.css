@@ -106,17 +106,16 @@
     z-index: 950; /* Justo debajo del menú */
   }
 }
-/* Contenedor superior del logo */
+
 .sidebar-header {
   width: 100%;
-  padding: 20px 16px;         /* Espacio interno para que respire */
+  padding: 20px 16px;         
   display: flex;
-  justify-content: center;    /* Centra el logo horizontalmente */
-  align-items: center;        /* Centra el logo verticalmente */
-  box-sizing: border-box;      /* Asegura que el padding no rompa el ancho */
+  justify-content: center;    
+  align-items: center;        
+  box-sizing: border-box;      
 }
 
-/* Enlace alrededor del logo (si usas NavLink) */
 .sidebar-header a {
   display: flex;
   justify-content: center;
@@ -124,12 +123,11 @@
   text-decoration: none;
 }
 
-/* Imagen del Logo */
 .sidebar-logo {
-  max-width: 85%;             /* Ocupa hasta el 85% del ancho del sidebar */
-  max-height: 80px;           /* Limita la altura para que no sea gigante */
-  width: auto;                /* Mantiene la proporción original */
-  height: auto;               /* Evita que se estire */
-  object-fit: contain;        /* Asegura que toda la imagen se vea sin recortarse */
+  max-width: 85%;             
+  max-height: 80px;           
+  width: auto;                
+  height: auto;               
+  object-fit: contain;        
   display: block;
 }
