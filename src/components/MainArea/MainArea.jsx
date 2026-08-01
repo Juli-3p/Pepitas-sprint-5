@@ -1,57 +1,32 @@
-import React from 'react';
-import './MainArea.css';
-import SummaryCard from '../SummaryCard/SummaryCard.jsx';
+import "./MainArea.css";
+import Sidebar from "../Sidebar/Sidebar";
 
-// Componente Header
-const Header = ({username="Usuario"}) => {
+// Header
+const Header = ({ username = "Usuario" }) => {
   return (
     <header className="header">
-      <h2>¡Hola {username}!</h2>
+      <h1>¡Hola <span>{username}</span>!</h1>
     </header>
   );
 };
 
-// Componente Content
-const Content = ({ username, productsCount, categoriesCount, children }) => {
-  return (
-    <main className="content">
-      <div className="home"> 
-
-        <div className="summary-conteiner">
-          <SummaryCard
-            title="Productos"
-            count={productsCount}
-            listRoute="/products"
-            newRoute="/products/new"
-            type="product"
-          />
-          <SummaryCard
-            title="Categorías"
-            count={categoriesCount}
-            listRoute="/categories"
-            newRoute="/categories/new"
-            type="category"
-          />
-        </div>
-      </div>
-
-      {children}
-    </main>
-  );
-};
-
-// Componente MainArea (Contenedor Principal)
-const MainArea = ({ username, productsCount, categoriesCount, children }) => {
+// MainArea
+const MainArea = ({ username, children }) => {
   return (
     <div className="main-area">
-      <Header />
-      <Content 
-        username={username} 
-        productsCount={productsCount} 
-        categoriesCount={categoriesCount}
-      >
-        {children}
-      </Content>
+
+      <Sidebar />
+
+      <div className="main-content">
+
+        <Header username={username} />
+
+        <main className="content">
+          {children}
+        </main>
+
+      </div>
+
     </div>
   );
 };
