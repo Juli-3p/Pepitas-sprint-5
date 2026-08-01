@@ -1,51 +1,54 @@
 .summary-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    width: 320px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  background-color: #252525;      
+  border-radius: 16px;            
+  padding: 18px 24px;
+  margin-bottom: 16px;
+  color: #ffffff;
 }
 
-.summary-card h2 {
-    margin: 0;
-    color: #235347;
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;               
 }
 
-.summary-card p {
-    margin: 0;
-    font-size: 18px;
-    color: #444;
+.card-icon {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
 }
 
-.summary-card strong {
-    color: #163832;
+.card-count {
+  font-size: 1.4rem;
+  font-weight: 700;             
 }
 
-.buttons {
-    display: flex;
-    gap: 12px;
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e0e0e0;
 }
 
-.buttons a {
-    flex: 1;
-    text-align: center;
-
-    text-decoration: none;
-
-    background-color: #235347;
-    color: white;
-
-    padding: 10px;
-
-    border-radius: 8px;
-
-    transition: 0.3s;
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;                      
 }
 
-.buttons a:hover {
-    background-color: #163832;
+.btn-card {
+  background-color: #444444;      
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;            
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-card:hover {
+  background-color: #555555;
 }

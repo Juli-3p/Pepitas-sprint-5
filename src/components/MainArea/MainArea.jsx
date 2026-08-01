@@ -3,10 +3,10 @@ import './MainArea.css';
 import SummaryCard from '../SummaryCard/SummaryCard.jsx';
 
 // Componente Header
-const Header = () => {
+const Header = ({username="Usuario"}) => {
   return (
     <header className="header">
-      <h2>Panel de Administración</h2>
+      <h2>¡Hola {username}!</h2>
     </header>
   );
 };
@@ -16,7 +16,6 @@ const Content = ({ username, productsCount, categoriesCount, children }) => {
   return (
     <main className="content">
       <div className="home"> 
-        <h1>Hola {username}</h1>
 
         <div className="summary-conteiner">
           <SummaryCard
